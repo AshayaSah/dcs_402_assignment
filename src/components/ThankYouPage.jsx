@@ -22,7 +22,7 @@ export function ThankYouPage({ onBack }) {
         <div className="mb-6 flex justify-center">
           <div className="relative w-56 h-56 rounded-2xl overflow-hidden shadow-lg ring-2 ring-rose-200/50">
             <Image
-              src="/catthanking.png"
+              src="/thanks.png"
               alt="Thank you illustration"
               fill
               className="object-cover"
