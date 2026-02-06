@@ -15,23 +15,19 @@ export function SelectionPage({ onYes, onNo }) {
 
           {/* Header text - mobile optimized */}
           <h1 className="text-2xl font-light text-center mb-2 text-gray-800 tracking-tight leading-tight">
-            Do you want to see something?
+            Do you want to see something? Not the same as yesterday but a
+            different one
           </h1>
 
           {/* Subheading */}
           <p className="text-base text-center mb-2 text-rose-600/90 font-medium">
-            I made something… just for you. I can't see you sad.
-          </p>
-
-          {/* Vulnerable message */}
-          <p className="text-sm text-center mb-6 text-gray-600 italic">
-            This is me, emotionally vulnerable. Please be gentle.
+            How can I forget the day... Haha not in real but VIRTUALLY
           </p>
 
           {/* Image container - mobile optimized */}
           <div className="relative w-full aspect-square max-w-[280px] mx-auto mb-6 rounded-2xl overflow-hidden shadow-lg">
             <Image
-              src="/catwithtear.png"
+              src="/catwithrose.png"
               alt="A heartfelt moment"
               fill
               className="object-cover"
@@ -84,7 +80,7 @@ export function SelectionPage({ onYes, onNo }) {
 
         {/* Footer text */}
         <p className="text-center mt-4 text-sm text-gray-500/80 px-4">
-          I really hope you'll give me a chance to explain... 💕
+          I really hope you'll bear with my bad jokes... 💕
         </p>
       </div>
     </div>
