@@ -10,6 +10,9 @@ import { SelectionPage } from '@/components/SelectionPage'
 import { ThankYouPage } from '@/components/ThankYouPage'
 import { ChocolateDaySelectionPage } from '@/days/ChocolateDaySelection'
 import { ProposeDaySelectionPage } from '@/days/ProposeDaySelectionPage'
+import TeddyDayHelloKitty from '@/days/teddy/TeddyDayPage'
+import { TeddyRevealPage } from '@/days/teddy/TeddyDayReveal'
+import { TeddyDaySelectionPage } from '@/days/teddy/TeddyDaySelection'
 import { useState } from 'react'
 
 export default function Page() {
@@ -25,15 +28,15 @@ export default function Page() {
     <main className="min-h-screen w-full">
       {/* {currentPage === 'selection' && <SelectionPage onYes={handleYes} onNo={handleNo} />} */}
 
-      {currentPage === 'selection' && <ChocolateDaySelectionPage onYes={handleYes} onNo={handleNo} />}
+      {currentPage === 'selection' && <TeddyDaySelectionPage onYes={handleYes} onNo={handleNo} />}
       {currentPage === 'no' && <HowDarePage onBack={handleBack} />}
 
       {/* {currentPage === 'yes' && <ApologyPage onBack={handleBack} handleForgive={handleForgive} />} */}
 
-      {currentPage === 'yes' && <ChocolateDay handleReveal={handleReveal} />}
+      {currentPage === 'yes' && <TeddyDayHelloKitty handleReveal={handleReveal} />}
 
       {currentPage === 'thankyou' && <ThankYouPage onBack={handleBack} />}
-      {currentPage === 'reveal' && <RevealPage onBack={handleBack} />}
+      {currentPage === 'reveal' && <TeddyRevealPage onBack={handleBack} />}
     </main>
   )
 }
