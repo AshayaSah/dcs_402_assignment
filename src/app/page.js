@@ -9,6 +9,9 @@ import RoseDayLetter from '@/components/RoseDay'
 import { SelectionPage } from '@/components/SelectionPage'
 import { ThankYouPage } from '@/components/ThankYouPage'
 import { ChocolateDaySelectionPage } from '@/days/ChocolateDaySelection'
+import PromiseDayMain from '@/days/promise/PromiseDay'
+import { PromiseDaySelectionPage } from '@/days/promise/PromiseDaySelection'
+import { PromiseRevealPage } from '@/days/promise/PromiseReveal'
 import { ProposeDaySelectionPage } from '@/days/ProposeDaySelectionPage'
 import TeddyDayHelloKitty from '@/days/teddy/TeddyDayPage'
 import { TeddyRevealPage } from '@/days/teddy/TeddyDayReveal'
@@ -28,15 +31,16 @@ export default function Page() {
     <main className="min-h-screen w-full">
       {/* {currentPage === 'selection' && <SelectionPage onYes={handleYes} onNo={handleNo} />} */}
 
-      {currentPage === 'selection' && <TeddyDaySelectionPage onYes={handleYes} onNo={handleNo} />}
+      {currentPage === 'selection' && <PromiseDaySelectionPage onYes={handleYes} onNo={handleNo} />}
       {currentPage === 'no' && <HowDarePage onBack={handleBack} />}
 
       {/* {currentPage === 'yes' && <ApologyPage onBack={handleBack} handleForgive={handleForgive} />} */}
 
-      {currentPage === 'yes' && <TeddyDayHelloKitty handleReveal={handleReveal} />}
+      {currentPage === 'yes' && <PromiseDayMain handleReveal={handleReveal} />}
 
       {currentPage === 'thankyou' && <ThankYouPage onBack={handleBack} />}
-      {currentPage === 'reveal' && <TeddyRevealPage onBack={handleBack} />}
+
+      {currentPage === 'reveal' && <PromiseRevealPage onBack={handleBack} />}
     </main>
   )
 }
