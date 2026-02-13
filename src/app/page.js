@@ -3,6 +3,7 @@
 import { ApologyPage } from '@/components/AppologyPage'
 import ChocolateDay from '@/components/ChocolateDay'
 import { HowDarePage } from '@/components/HowDarePage'
+import MusicPlayer from '@/components/MusicPlayer'
 import ProposeDay from '@/components/ProposeDay'
 import { RevealPage } from '@/components/RevealPage'
 import RoseDayLetter from '@/components/RoseDay'
@@ -12,6 +13,9 @@ import { ChocolateDaySelectionPage } from '@/days/ChocolateDaySelection'
 import HugDayMain from '@/days/hugday/HugDay'
 import { HugRevealPage } from '@/days/hugday/HugDayReveal'
 import { HugDaySelectionPage } from '@/days/hugday/HugDaySelection'
+import KissDayMain from '@/days/kill/KillDay'
+import { KissDaySelectionPage } from '@/days/kill/KillDaySelection'
+import { KissRevealPage } from '@/days/kill/KillReveal'
 import PromiseDayMain from '@/days/promise/PromiseDay'
 import { PromiseDaySelectionPage } from '@/days/promise/PromiseDaySelection'
 import { PromiseRevealPage } from '@/days/promise/PromiseReveal'
@@ -32,18 +36,20 @@ export default function Page() {
 
   return (
     <main className="min-h-screen w-full">
+      <MusicPlayer></MusicPlayer>
+
       {/* {currentPage === 'selection' && <SelectionPage onYes={handleYes} onNo={handleNo} />} */}
 
-      {currentPage === 'selection' && <HugDaySelectionPage onYes={handleYes} onNo={handleNo} />}
+      {currentPage === 'selection' && <KissDaySelectionPage onYes={handleYes} onNo={handleNo} />}
       {currentPage === 'no' && <HowDarePage onBack={handleBack} />}
 
       {/* {currentPage === 'yes' && <ApologyPage onBack={handleBack} handleForgive={handleForgive} />} */}
 
-      {currentPage === 'yes' && <HugDayMain handleReveal={handleReveal} />}
+      {currentPage === 'yes' && <KissDayMain handleReveal={handleReveal} />}
 
       {currentPage === 'thankyou' && <ThankYouPage onBack={handleBack} />}
 
-      {currentPage === 'reveal' && <HugRevealPage onBack={handleBack} />}
+      {currentPage === 'reveal' && <KissRevealPage onBack={handleBack} />}
     </main>
   )
 }
